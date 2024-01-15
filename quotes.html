@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Webpage</title>
+    <script src="htmx.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          auctor, nunc id tincidunt lacinia, velit nunc tincidunt ex, ac
+          tincidunt nisl nunc id nunc.
+        </p>
+      </section>
+
+      <section>
+        <h2>My Quotes</h2>
+        <button
+          hx-get="http://127.0.0.1:8000"
+          hx-swap="innerHTML"
+          hx-target="#quote"
+        >
+          Get a random quote
+        </button>
+
+        <div id="quote"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2022 My Webpage. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
